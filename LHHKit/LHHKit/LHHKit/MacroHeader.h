@@ -210,14 +210,23 @@ _Pragma("clang diagnostic pop")
 
 
 #ifndef __OPTIMIZE__
-#define NSLog(...) NSLog(__VA_ARGS__)
+#define NSLog(...) printf("[%s] %s [第%d行]: %s\n", __TIME__ ,__PRETTY_FUNCTION__ ,__LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String])
 #else
-#define NSLog(...) {}
+# define NSLog(...)
 #endif
 
 #define RGBA(r,g,b,a)       [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 #define RGB(r,g,b)          RGBA(r,g,b,1)
 #define RGBEqualColor(c)    RGB(c,c,c)
 #define RGBRandom           RGB(arc4random()%255,arc4random()%255,arc4random()%255)
+
+#define kscreen_width ([UIScreen mainScreen].bounds.size.width)
+#define kscreen_height ([UIScreen mainScreen].bounds.size.height)
+
+#define IS_iPhoneX               (kscreen_width == 375.f && kscreen_height == 812.f ? YES:NO)
+#define NavibarHeight            (IS_iPhoneX ? 88.f : 64.f)
+#define TabbarHeight             (IS_iPhoneX ? (49.f + 34.f) : 49.f)
+#define StatusbarHeight          (IS_iPhoneX ? 44.f : 20.f)
+#define TabbarBottomOffset             (IS_iPhoneX ? 34.f:0) //底部高度差
 
 #endif /* MacroHeader_h */

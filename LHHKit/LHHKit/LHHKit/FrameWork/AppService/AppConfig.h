@@ -37,6 +37,4 @@ SingletonInterface(AppConfig)
 
 + (NSString *)themeCachePath;
 
-- (NSDictionary *)convertDictionary:(NSDictionary *)parameters;
-
 @end

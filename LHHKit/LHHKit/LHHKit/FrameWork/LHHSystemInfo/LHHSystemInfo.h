@@ -17,7 +17,6 @@
 
 + (BOOL)everLaunched;
 + (NSInteger)launchedTimes;
-
 + (NSString *)deviceUUID;
 + (NSString *)appVersion;
 + (NSString *)appIdentifier;

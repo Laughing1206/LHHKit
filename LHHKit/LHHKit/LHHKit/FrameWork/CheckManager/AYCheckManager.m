@@ -118,18 +118,20 @@ static AYCheckManager *checkManager = nil;
                 [userDefault setBool:NO forKey:SKIP_CURRENT_VERSION];
             }
             dispatch_async(dispatch_get_main_queue(), ^{
-                if (![[userDefault objectForKey:SKIP_CURRENT_VERSION] boolValue])
+                NSArray *AppStoreVersionArray = [resultDic[@"version"] componentsSeparatedByString:@"."];
+                NSArray *localVersionArray = [CURRENT_VERSION componentsSeparatedByString:@"."];
+                BOOL isDescending = YES;
+                for (int index = 0; index < AppStoreVersionArray.count; index ++)
                 {
-                    NSArray *AppStoreVersionArray = [resultDic[@"version"] componentsSeparatedByString:@"."];
-                    NSArray *localVersionArray = [CURRENT_VERSION componentsSeparatedByString:@"."];
-                    for (int index = 0; index < AppStoreVersionArray.count; index ++)
+                    if ([AppStoreVersionArray[index] intValue] < [localVersionArray[index] intValue])
                     {
-                        if ([AppStoreVersionArray[index] intValue] > [localVersionArray[index] intValue])
-                        {
-                            [self compareWithCurrentVersion];
-                            break;
-                        }
+                        isDescending = NO;
+                        break;
                     }
+                }
+                if (isDescending)
+                {
+                    [self compareWithCurrentVersion];
                 }
             });
         }

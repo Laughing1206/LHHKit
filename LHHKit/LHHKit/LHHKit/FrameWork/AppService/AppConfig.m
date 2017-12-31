@@ -66,7 +66,7 @@ SingletonImplemention(AppConfig)
 
 - (NSString *)scheme
 {
-    return @"deeplink";
+    return @"LHHKit";
 }
 
 + (NSString *)schemeWithAction:(NSString *)action
@@ -131,21 +131,6 @@ SingletonImplemention(AppConfig)
         }
         self.currentNetWorkStatus = self.networkRechabilityManager.networkReachabilityStatus;
     }];
-}
-
-- (NSDictionary *)convertDictionary:(NSDictionary *)parameters
-{
-    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
-    for (__unsafe_unretained NSString *key in parameters)
-    {
-        id value = [parameters valueForKey:key];
-        if ( [value isKindOfClass:[NSDictionary class]] )
-        {
-            value = [value JSONStringRepresentation];
-        }
-        [dict setObject:value forKey:key];
-    }
-    return dict.count ? dict : nil;
 }
 
 @end

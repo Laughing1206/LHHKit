@@ -15,6 +15,7 @@
 #import "ViewController.h"
 #import "Model.h"
 #import "TestView.h"
+#import "WebViewController.h"
 @interface ViewController ()<UITableViewDelegate , UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView * tableView;
@@ -35,6 +36,7 @@
 
 - (void)setupUI
 {
+    self.navigationItem.title = @"LHHKit";
     self.view.backgroundColor = [UIColor whiteColor];
     self.dataArray = [NSMutableArray array];
     self.currentPage = 1;
@@ -43,11 +45,11 @@
 
 - (void)setupViews
 {
-    TestView * testView = [[TestView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 100)];
+    TestView * testView = [[TestView alloc] initWithFrame:CGRectMake(0, NavibarHeight, [UIScreen mainScreen].bounds.size.width, 100)];
     testView.backgroundColor = [UIColor redColor];
     [self.view addSubview:testView];
     
-    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 100) style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, testView.bottom, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - testView.bottom - TabbarBottomOffset) style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.estimatedRowHeight = 0;
@@ -55,7 +57,8 @@
     self.tableView.estimatedSectionFooterHeight = 0;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor colorWithHexString:@"F3F5F9"];
-    if (@available(iOS 11.0, *)) {
+    if (@available(iOS 11.0, *))
+    {
         self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }
     [self.view addSubview:self.tableView];
@@ -153,10 +156,17 @@
     return 0.001;
 }
 
+
 handleSignal(test)
 {
     UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"我是Signal" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction * confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:NULL];
+    UIAlertAction * confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        WebViewController * webViewController = [[WebViewController alloc] init];
+        webViewController.titleString = @"LHHKit";
+        webViewController.urlString = @"http://www.jianshu.com/u/3c6ff28fdc63";
+        [self.navigationController pushViewController:webViewController animated:YES];
+    }];
     [alertController addAction:confirmAction];
     [self presentViewController:alertController animated:YES completion:NULL];
     
