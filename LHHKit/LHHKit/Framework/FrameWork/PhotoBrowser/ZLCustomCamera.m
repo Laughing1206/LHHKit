@@ -712,7 +712,10 @@
 //切换摄像头
 - (void)btnToggleCameraAction
 {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     NSUInteger cameraCount = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo].count;
+#pragma clang diagnostic pop
     if (cameraCount > 1) {
         NSError *error;
         AVCaptureDeviceInput *newVideoInput;
@@ -750,7 +753,10 @@
 }
 
 - (AVCaptureDevice *)cameraWithPosition:(AVCaptureDevicePosition) position {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+#pragma clang diagnostic pop
     for (AVCaptureDevice *device in devices) {
         if ([device position] == position) {
             return device;
@@ -782,7 +788,10 @@
         if (imageDataSampleBuffer == NULL) {
             return;
         }
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         NSData * imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
+#pragma clang diagnostic pop
         UIImage * image = [UIImage imageWithData:imageData];
         weakSelf.takedImage = image;
         weakSelf.takedImageView.hidden = NO;

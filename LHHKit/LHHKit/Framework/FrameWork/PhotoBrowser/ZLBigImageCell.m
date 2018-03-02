@@ -1020,7 +1020,10 @@
 - (void)seekToZero
 {
     AVPlayer *player = self.playLayer.player;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     [player.currentItem seekToTime:kCMTimeZero];
+#pragma clang diagnostic pop
 }
 
 - (void)stopPlayNetVideo
@@ -1056,7 +1059,10 @@
     if (player.rate == .0) {
         self.playBtn.hidden = YES;
         if (stop.value == duration.value) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
             [player.currentItem seekToTime:CMTimeMake(0, 1)];
+#pragma clang diagnostic pop
         }
         [player play];
     } else {
