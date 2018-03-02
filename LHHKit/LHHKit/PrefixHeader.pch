@@ -1,0 +1,22 @@
+//
+//   ___           ___        ___      ___        ___
+//  /\  \         /\  \      /\  \    /\  \      /\  \
+//  \ \  \        \ \  \_____\ \  \   \ \  \_____\ \  \
+//   \ \  \        \ \  \_____\ \  \   \ \  \_____\ \  \
+//    \ \  \______  \ \  \     \ \  \   \ \  \     \ \  \
+//     \ \________\  \ \__\     \ \__\   \ \__\     \ \__\
+//      \/________/   \/__/      \/__/    \/__/      \/__/
+//
+//  欢欢为人民服务
+//  有问题请联系我，http://www.jianshu.com/u/3c6ff28fdc63
+//
+// -----------------------------------------------------------------------------
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "LHHKitHeader.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */

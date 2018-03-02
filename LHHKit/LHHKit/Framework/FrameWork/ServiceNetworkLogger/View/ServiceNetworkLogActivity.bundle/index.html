@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="highlight.css">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript">
+        var json = {json};
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <h2>API - <%- api.request.endpoint %></h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>URL</td>
+                    <td><a href="<%- api.url %>"><%- api.url %></a></td>
+                </tr>
+                <tr>
+                    <td>Method</td>
+                    <td><%- api.request.method %></td>
+                </tr>
+                <tr>
+                    <td>Status Code</td>
+                    <td>
+                        <% if (!api.error) {%>
+                            <b><%- api.status %></b>
+                        <% } else {%>
+                            <b class="error"><%- api.status %></b>
+                        <% } %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Elapsed Time</td>
+                    <td><%- api.duration %> s</td>
+                </tr>
+                <tr>
+                    <td>Send Bytes</td>
+                    <td><%- api.sendByte %> </td>
+                </tr>
+                <tr>
+                    <td>Receive Bytes</td>
+                    <td><%- api.receiveByte %> </td>
+                </tr>
+                <tr>
+                    <td>Total Bytes</td>
+                    <td><%- api.totalByte %> </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Request</h2>
+        <%if (api.request.header) {%>
+            <h3>Header</h3><pre><code class="json"><%- __.print(api.request.header) %></code></pre>
+        <% } %>
+        <%if (api.request.body) {%>
+            <h3>Body</h3><pre><code class="json"><%- __.print(api.request.body) %></code></pre>
+        <% } %>
+        <%if ( api.response && (api.response.header || api.response.body) ) { %>
+            <h2>Response</h2>
+            <%if (api.response.header) {%>
+                <h3>Header</h3><pre><code class="json"><%- __.print(api.response.header) %></code></pre>
+            <% } %>
+            <%if (api.response.body) {%>
+                <h3>Body</h3><pre><code class="json"><%- __.print(api.response.body) %></code></pre>
+            <% } %>
+        <% } %>
+        <% if ( api.error ) { %>
+            <h2 class="error">Error</h2>
+            <h3>Code</h3><pre><code><%- api.error.code %></code></pre>
+            <h3>Message</h3><pre><code class="json"><%- api.error.message %></code></pre>
+            <%if (api.error.body) {%>
+                <%if (api.error.isHTML) {%>
+                <h3>Response Data (HTML)</h3>
+                <div id="error-box-container">
+                <iframe id="error-box" seamless srcdoc='<%- __.print(api.error.body) %>'></iframe>
+                </div>
+                <%} else {%>
+                <h3>Response Data</h3>
+                <pre><code class="json"><%- __.print(api.error.body) %></code></pre>
+                <% } %>
+            <% } %>
+        <% } %>
+    </div>
+    <script src="highlight.pack.js"></script>
+    <script src="underscore-min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

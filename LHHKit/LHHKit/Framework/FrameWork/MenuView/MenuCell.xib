@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCell" id="KGk-i7-Jjw" customClass="MenuCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Igc-N7-gaV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </imageView>
+                    <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2b-FY-BeM">
+                        <rect key="frame" x="46" y="0.0" width="274" height="43"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="43" id="JIi-yu-USC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8OD-FX-vbo">
+                        <rect key="frame" x="23" y="10" width="23" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="23" id="TAH-PK-get"/>
+                            <constraint firstAttribute="height" constant="24" id="WBd-B5-XmF"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Igc-N7-gaV" secondAttribute="bottom" id="FJc-gq-oTH"/>
+                    <constraint firstAttribute="bottom" secondItem="8OD-FX-vbo" secondAttribute="bottom" constant="9" id="Jsf-RA-NeM"/>
+                    <constraint firstAttribute="trailing" secondItem="M2b-FY-BeM" secondAttribute="trailing" id="YBE-Em-iBW"/>
+                    <constraint firstAttribute="bottom" secondItem="M2b-FY-BeM" secondAttribute="bottom" id="gXv-wl-O9O"/>
+                    <constraint firstAttribute="trailing" secondItem="Igc-N7-gaV" secondAttribute="trailing" id="kfc-QS-bPj"/>
+                    <constraint firstItem="M2b-FY-BeM" firstAttribute="leading" secondItem="8OD-FX-vbo" secondAttribute="trailing" id="oIS-7Q-RHD"/>
+                    <constraint firstItem="8OD-FX-vbo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="23" id="vGc-Z9-oJc"/>
+                    <constraint firstItem="Igc-N7-gaV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xvt-T3-xD8"/>
+                    <constraint firstItem="Igc-N7-gaV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ygN-QF-LKu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="bgImageView" destination="Igc-N7-gaV" id="STz-Xc-wWj"/>
+                <outlet property="headImageView" destination="8OD-FX-vbo" id="izl-bB-edt"/>
+                <outlet property="titleLabel" destination="M2b-FY-BeM" id="JUX-8N-Igq"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

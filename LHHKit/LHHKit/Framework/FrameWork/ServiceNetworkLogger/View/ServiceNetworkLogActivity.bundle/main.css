@@ -1,0 +1,120 @@
+body {
+    color: white;
+    background-image: -webkit-linear-gradient(#2a1b52, #533b89 800px);
+    background-image: -o-linear-gradient(#2a1b52, #533b89 800px);
+    background-image: linear-gradient(#2a1b52, #533b89 800px);
+    font-size: 14px;
+    font-family: 'Source Code Pro', monospace, "Helvetica Neue", Helvetica, Arial,sans-serif;
+    line-height: 1.42857143;
+}
+
+#container {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: #40f6bb;
+  border-bottom: 1px solid rgba(64,246,187,0.6);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  text-decoration: none;
+}
+
+.table {
+    width: 100%;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+/*.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th {
+    text-align: center;
+}
+
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  text-align: left;
+}
+*/
+.table > thead > tr > th:first-child,
+.table > tbody > tr > th:first-child,
+.table > tfoot > tr > th:first-child,
+.table > thead > tr > td:first-child,
+.table > tbody > tr > td:first-child,
+.table > tfoot > tr > td:first-child {
+  min-width: 80px;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  text-align: center;
+  padding: 8px 0;
+  line-height: 1.42857143;
+  vertical-align: middle;
+  border-top: none;
+  border: 1px dashed #645881 !important;
+}
+
+.table > thead > tr > th {
+  vertical-align: bottom;
+  background: #272333;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #3a2765;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+tr {
+    border-top: 1px dashed #645881;
+}
+
+pre ,
+pre code {
+    word-wrap: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial,sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+.error {
+  color: rgb(255, 0, 58);
+}
+
+#error-box {
+  width: 100%;
+  border-radius: 15px;
+  background-color: #272333;
+  overflow: auto;
+  color: white;
+}
