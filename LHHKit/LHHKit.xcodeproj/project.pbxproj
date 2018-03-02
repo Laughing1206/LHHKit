@@ -32,6 +32,10 @@
 		C63B1CE51FCAAAE500137508 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C63B1CE11FCAAAE500137508 /* Model.m */; };
 		C63B1CE61FCAAAE500137508 /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = C63B1CE21FCAAAE500137508 /* API.m */; };
 		C693907A1FCAC85E00BF36EC /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = C69390791FCAC85E00BF36EC /* TestView.m */; };
+		C69943E620491F230069BCEE /* BatteryInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C69943E120491F230069BCEE /* BatteryInfoManager.m */; };
+		C69943E720491F230069BCEE /* DeviceDataLibrery.m in Sources */ = {isa = PBXBuildFile; fileRef = C69943E320491F230069BCEE /* DeviceDataLibrery.m */; };
+		C69943E820491F230069BCEE /* DeviceInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C69943E420491F230069BCEE /* DeviceInfoManager.m */; };
+		C69943E920491F230069BCEE /* NetWorkInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C69943E520491F230069BCEE /* NetWorkInfoManager.m */; };
 		C6B726E42048FF7D007BD9BC /* NSDictionary+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B721E92048FF78007BD9BC /* NSDictionary+BlocksKit.m */; };
 		C6B726E52048FF7D007BD9BC /* NSMutableArray+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B721EB2048FF78007BD9BC /* NSMutableArray+BlocksKit.m */; };
 		C6B726E62048FF7D007BD9BC /* NSMutableIndexSet+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B721EC2048FF78007BD9BC /* NSMutableIndexSet+BlocksKit.m */; };
@@ -665,6 +669,14 @@
 		C63B1CE41FCAAAE500137508 /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
 		C69390781FCAC85E00BF36EC /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		C69390791FCAC85E00BF36EC /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		C69943DE20491F220069BCEE /* DeviceDataLibrery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceDataLibrery.h; sourceTree = "<group>"; };
+		C69943DF20491F220069BCEE /* BatteryInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatteryInfoManager.h; sourceTree = "<group>"; };
+		C69943E020491F230069BCEE /* DeviceInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfoManager.h; sourceTree = "<group>"; };
+		C69943E120491F230069BCEE /* BatteryInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryInfoManager.m; sourceTree = "<group>"; };
+		C69943E220491F230069BCEE /* NetWorkInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkInfoManager.h; sourceTree = "<group>"; };
+		C69943E320491F230069BCEE /* DeviceDataLibrery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDataLibrery.m; sourceTree = "<group>"; };
+		C69943E420491F230069BCEE /* DeviceInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfoManager.m; sourceTree = "<group>"; };
+		C69943E520491F230069BCEE /* NetWorkInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkInfoManager.m; sourceTree = "<group>"; };
 		C6B71FB02048FEC3007BD9BC /* LHHKitHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHKitHeader.h; sourceTree = "<group>"; };
 		C6B71FB12048FEC3007BD9BC /* MacroHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroHeader.h; sourceTree = "<group>"; };
 		C6B721E72048FF78007BD9BC /* BlocksKit+UIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BlocksKit+UIKit.h"; sourceTree = "<group>"; };
@@ -3962,6 +3974,14 @@
 			children = (
 				C6B726562048FF7C007BD9BC /* SDiPhoneVersion.h */,
 				C6B726572048FF7C007BD9BC /* SDiPhoneVersion.m */,
+				C69943DF20491F220069BCEE /* BatteryInfoManager.h */,
+				C69943E120491F230069BCEE /* BatteryInfoManager.m */,
+				C69943DE20491F220069BCEE /* DeviceDataLibrery.h */,
+				C69943E320491F230069BCEE /* DeviceDataLibrery.m */,
+				C69943E020491F230069BCEE /* DeviceInfoManager.h */,
+				C69943E420491F230069BCEE /* DeviceInfoManager.m */,
+				C69943E220491F230069BCEE /* NetWorkInfoManager.h */,
+				C69943E520491F230069BCEE /* NetWorkInfoManager.m */,
 			);
 			path = SDiPhoneVersion;
 			sourceTree = "<group>";
@@ -4766,6 +4786,7 @@
 				C6B727DA2048FF7D007BD9BC /* ZXBinaryBitmap.m in Sources */,
 				C6B728512048FF7D007BD9BC /* ZXUPCAReader.m in Sources */,
 				C6B728F42048FF7E007BD9BC /* LHHOnceModel.m in Sources */,
+				C69943E920491F230069BCEE /* NetWorkInfoManager.m in Sources */,
 				C6B7296C204912C6007BD9BC /* TencentOpenShared.m in Sources */,
 				C6B729EC204912D9007BD9BC /* ServiceAlipay.m in Sources */,
 				C6B727642048FF7D007BD9BC /* AFURLRequestSerialization.m in Sources */,
@@ -4965,6 +4986,7 @@
 				C6B7286E2048FF7D007BD9BC /* ZXRSSExpandedReader.m in Sources */,
 				C6B727452048FF7D007BD9BC /* DPLRegularExpression.m in Sources */,
 				C6B728842048FF7E007BD9BC /* ZXEmailAddressResultParser.m in Sources */,
+				C69943E620491F230069BCEE /* BatteryInfoManager.m in Sources */,
 				C6B7290A2048FF7E007BD9BC /* UIScrollView+MJExtension.m in Sources */,
 				C6B726F22048FF7D007BD9BC /* NSMutableDictionary+BlocksKit.m in Sources */,
 				C6B7279F2048FF7D007BD9BC /* AFNetworkActivityLogger.m in Sources */,
@@ -4983,6 +5005,7 @@
 				C6B727C02048FF7D007BD9BC /* Authorization.m in Sources */,
 				C6B7275F2048FF7D007BD9BC /* Aspects.m in Sources */,
 				C6B7289B2048FF7E007BD9BC /* ZXSMSMMSResultParser.m in Sources */,
+				C69943E720491F230069BCEE /* DeviceDataLibrery.m in Sources */,
 				C6B729042048FF7E007BD9BC /* UIScrollView+MJRefresh.m in Sources */,
 				C6B727A22048FF7D007BD9BC /* ZLForceTouchPreviewController.m in Sources */,
 				C6B727FE2048FF7D007BD9BC /* ZXQRCodeAlignmentPattern.m in Sources */,
@@ -5023,6 +5046,7 @@
 				C6B727302048FF7D007BD9BC /* PPCounterEngine.m in Sources */,
 				C6B7285A2048FF7D007BD9BC /* ZXAnyAIDecoder.m in Sources */,
 				C6B7274B2048FF7D007BD9BC /* NSString+DPLTrim.m in Sources */,
+				C69943E820491F230069BCEE /* DeviceInfoManager.m in Sources */,
 				C6B727812048FF7D007BD9BC /* UIImage+GIF.m in Sources */,
 				C6B727252048FF7D007BD9BC /* LHHSignalBus.m in Sources */,
 				C6B7281E2048FF7D007BD9BC /* ZXPDF417BarcodeMatrix.m in Sources */,
