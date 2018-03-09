@@ -142,10 +142,4 @@ SingletonInterface( AppTheme )
     viewController:(UIViewController *)viewController;
 
 + (CGSize)calculateTextSizeWithText:(NSString *)text textFont:(CGFloat)textFont maxWidth:(CGFloat)maxWidth;
-
-+ (NSString *)bundleVersion;
-+ (NSString *)bundleShortVersion;
-+ (NSString *)bundleIdentifier;
-+ (NSString *)urlSchema;
-+ (NSString *)urlSchemaWithName:(NSString *)name;
 @end

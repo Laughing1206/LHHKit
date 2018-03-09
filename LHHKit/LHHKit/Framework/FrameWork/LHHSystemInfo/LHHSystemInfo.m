@@ -87,4 +87,80 @@
     
     return preferredLang;
 }
+
++ (NSString *)bundleVersion
+{
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR || TARGET_OS_MAC)
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+#else
+    return nil;
+#endif
+}
+
++ (NSString *)bundleShortVersion
+{
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR || TARGET_OS_MAC)
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+#else
+    return nil;
+#endif
+}
+
++ (NSString *)bundleIdentifier
+{
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
+#else
+    return nil;
+#endif
+}
+
++ (NSString *)urlScheme
+{
+    return [self urlSchemeWithName:nil];
+}
+
++ (NSString *)urlSchemeWithName:(NSString *)name
+{
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+    
+    NSArray * array = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleURLTypes"];
+    for ( NSDictionary * dict in array )
+    {
+        if ( name )
+        {
+            NSString * URLName = [dict objectForKey:@"CFBundleURLName"];
+            if ( nil == URLName )
+            {
+                continue;
+            }
+            
+            if ( NO == [URLName isEqualToString:name] )
+            {
+                continue;
+            }
+        }
+        
+        NSArray * URLSchemes = [dict objectForKey:@"CFBundleURLSchemes"];
+        if ( nil == URLSchemes || 0 == URLSchemes.count )
+        {
+            continue;
+        }
+        
+        NSString * scheme = [URLSchemes objectAtIndex:0];
+        if ( scheme && scheme.length )
+        {
+            return scheme;
+        }
+    }
+    
+    return nil;
+    
+#else
+    
+    return nil;
+    
+#endif
+}
+
 @end

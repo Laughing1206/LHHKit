@@ -21,5 +21,9 @@
 + (NSString *)appVersion;
 + (NSString *)appIdentifier;
 + (NSString *)getPreferredLanguage;
-
++ (NSString *)bundleVersion;
++ (NSString *)bundleShortVersion;
++ (NSString *)bundleIdentifier;
++ (NSString *)urlScheme;
++ (NSString *)urlSchemeWithName:(NSString *)name;
 @end

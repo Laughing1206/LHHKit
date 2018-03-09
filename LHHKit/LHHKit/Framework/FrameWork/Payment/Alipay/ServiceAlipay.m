@@ -77,7 +77,7 @@ SingletonImplemention(ServiceAlipay)
 - (void)pay
 {
 
-    NSString * appScheme = [self urlSchemaWithName:@"alipay"];
+    NSString * appScheme = [self urlSchemeWithName:@"alipay"];
 
     //将签名成功字符串格式化为订单字符串,请严格按照该格式
 	NSString * orderString = self.config.order_string;
@@ -175,7 +175,7 @@ SingletonImplemention(ServiceAlipay)
     }
 }
 
-- (NSString *)urlSchemaWithName:(NSString *)name
+- (NSString *)urlSchemeWithName:(NSString *)name
 {
 #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
     
@@ -202,10 +202,10 @@ SingletonImplemention(ServiceAlipay)
             continue;
         }
         
-        NSString * schema = [URLSchemes objectAtIndex:0];
-        if ( schema && schema.length )
+        NSString * scheme = [URLSchemes objectAtIndex:0];
+        if ( scheme && scheme.length )
         {
-            return schema;
+            return scheme;
         }
     }
     
