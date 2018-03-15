@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6105FF8205A6AD700189EC1 /* NullCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = C6105FF7205A6AD700189EC1 /* NullCrash.m */; };
 		C62250E01FB8AE7C00AFBA6D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62250DF1FB8AE7200AFBA6D /* Security.framework */; };
 		C62250E21FB8AE9100AFBA6D /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C62250E11FB8AE9100AFBA6D /* libresolv.tbd */; };
 		C62250E41FB8AE9C00AFBA6D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C62250E31FB8AE9C00AFBA6D /* libz.tbd */; };
@@ -636,6 +637,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C6105FF6205A6AD700189EC1 /* NullCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullCrash.h; sourceTree = "<group>"; };
+		C6105FF7205A6AD700189EC1 /* NullCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullCrash.m; sourceTree = "<group>"; };
 		C62250DF1FB8AE7200AFBA6D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C62250E11FB8AE9100AFBA6D /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		C62250E31FB8AE9C00AFBA6D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -2016,6 +2019,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C6105FF5205A6AD700189EC1 /* NullCrash */ = {
+			isa = PBXGroup;
+			children = (
+				C6105FF6205A6AD700189EC1 /* NullCrash.h */,
+				C6105FF7205A6AD700189EC1 /* NullCrash.m */,
+			);
+			path = NullCrash;
+			sourceTree = "<group>";
+		};
 		C62250DE1FB8AE7100AFBA6D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2119,6 +2131,7 @@
 				C6B726942048FF7C007BD9BC /* Model */,
 				C6B726DB2048FF7D007BD9BC /* NetWork */,
 				C6B726432048FF7B007BD9BC /* NibStyle */,
+				C6105FF5205A6AD700189EC1 /* NullCrash */,
 				C6B722C32048FF78007BD9BC /* NumberButton */,
 				C6B7263C2048FF7B007BD9BC /* PageTopView */,
 				C6B72970204912D8007BD9BC /* Payment */,
@@ -4842,6 +4855,7 @@
 				C6B728AF2048FF7E007BD9BC /* SubLBXScanViewController.m in Sources */,
 				C6B7287F2048FF7E007BD9BC /* ZXUPCEANExtension2Support.m in Sources */,
 				C6B728132048FF7D007BD9BC /* ZXBitMatrix.m in Sources */,
+				C6105FF8205A6AD700189EC1 /* NullCrash.m in Sources */,
 				C6B7271F2048FF7D007BD9BC /* UISlider+Signal.m in Sources */,
 				C6B728ED2048FF7E007BD9BC /* UIColor+Extension.m in Sources */,
 				C6B728032048FF7D007BD9BC /* ZXQRCodeReader.m in Sources */,
