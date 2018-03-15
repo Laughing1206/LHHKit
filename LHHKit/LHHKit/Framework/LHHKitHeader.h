@@ -49,6 +49,7 @@
 #import "UIView+TYAlertView.h"
 #import "MJExtension.h"
 #import "SDiPhoneVersion.h"
+#import "NullCrash.h"
 
 #endif
 #endif /* LHHKitHeader_h */
